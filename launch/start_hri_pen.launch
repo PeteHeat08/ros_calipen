@@ -1,0 +1,7 @@
+<launch>
+    <!-- Execute bash command -->
+    <!--node name="rfcomm_connect" pkg="ros_kalipen" type="enable_kalipen.sh"></node-->
+
+    <!-- Start joy_node -->
+    <node ns="kalipen" name="ros_kalipen_node" pkg="ros_kalipen" type="joy_node.py" output="screen"></node>
+</launch>
