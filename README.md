@@ -29,5 +29,19 @@ roslaunch ros_kalipen start_ros_pen.launch
 ```
 Before roslaunch enable `/dev/rfcomm0` with `enable_kalipen.sh` script (NOTE: Uses sudo).  
 
+## Bluetooth 
+
+After turning off ROS node, or restarting PC run following: 
+```
+sudo bluetoothctl 
+disconnect <mac_adress> 
+scan on 
+... wait for it to find Kalibracijska olovka ... 
+scan off 
+pair <mac_adress> 
+... run enable_kalipen.sh in ROS pkg 
+```
+
+
 
 
