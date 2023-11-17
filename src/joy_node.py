@@ -31,7 +31,7 @@ class KaliPen():
 				self.joy.header = self.h
 				self.joy.buttons = [0]
 				self.pub.publish(self.joy)
-			#print(data)
+				print(data)
 			self.rate.sleep()
 			
 if __name__ =='__main__':
