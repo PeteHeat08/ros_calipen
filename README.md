@@ -42,6 +42,15 @@ pair <mac_adress>
 ... run enable_kalipen.sh in ROS pkg 
 ```
 
-
+## Integration with OptiTrack and MoveIt!
+To use calipen with OptiTrack to add an obstacle to MoveIt!, run integration.py
+To set up optitrack, follow instructions given here: https://docs.google.com/document/d/10H454y4VQQ9cz_xel2W3ICzP6a977ihetLgZ9g7HQB4/edit
+MoveIt can be installed using this link: https://ros-planning.github.io/moveit_tutorials/doc/getting_started/getting_started.html
+Start moveit using the launch file:
+```
+roslaunch panda_moveit_config demo.launch rviz_tutorial:=true
+```
+(To see added obstacle add PlanningScene to rviz)
+Script subscribes to /vrpn_client_node/Kalipen/pose to fetch detected pose of the pen and /kalipen/joy to detect pen clicks. Upon clicking, a block is added in the detected pose in the planning scene in MoveIt!
 
 
